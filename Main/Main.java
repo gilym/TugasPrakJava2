@@ -11,7 +11,7 @@ public class Main {
    
     public static void main(String[] args) {
         Scanner Input = new Scanner(System.in);
-        int temp;
+        int temp,temp1;
         do{
             
             System.out.println("------------------------------");
@@ -24,7 +24,8 @@ public class Main {
       
        
         switch(pil){
-            case 1 : System.out.println("------------------------------");
+            case 1 :do{
+                    System.out.println("------------------------------");
                     System.out.println("Persegi Panjang dan Balok");
                     System.out.println("------------------------------");
                     System.out.print("Input Panjang : "); double panjang = Input.nextDouble();
@@ -43,26 +44,33 @@ public class Main {
                     balok.luasPermukaan();
                     balok.volume();
                     System.out.println("------------------------------\n\n");
+                    System.out.print("Apakah Ingin mengulang Perhitungan ? (Yes = 1 | No = 0) :  " ); int ulang = Input.nextInt();
+                    temp1=ulang;
+                    }while( temp1 == 1);
                     break;
                     
-            case 2 :System.out.println("------------------------------");
+            case 2 :do{
+                    System.out.println("------------------------------");
                     System.out.println("Persegi Panjang dan Balok");
                     System.out.println("------------------------------");
                     System.out.print("Input Jari-Jari : "); double jari = Input.nextDouble();
                     System.out.print("Input Tinggi  : ") ;double tinggi1 = Input.nextDouble();
                     Tabung tabung = new Tabung (0,0,tinggi1,jari);
                     Lingkaran lingkaran = new Lingkaran (0,0,tinggi1,jari);
-                     System.out.println("------------------------------");
+                    System.out.println("------------------------------");
                     System.out.println("Lingkaran");
                     System.out.println("------------------------------");
                     lingkaran.keliling();
                     lingkaran.luas();
                     System.out.println("------------------------------");
                     System.out.println("Tabung");
-                     System.out.println("------------------------------");
+                    System.out.println("------------------------------");
                     tabung.luasPermukaan();
                     tabung.volume();
                     System.out.println("------------------------------\n\n");
+                    System.out.print("Apakah Ingin mengulang Perhitungan ? (Yes = 1 | No = 0) :  " ); int ulang = Input.nextInt();
+                    temp1=ulang;
+                    }while(temp1==1);
                     break;
                     
             case 3 : System.out.println("Terima Kasih :) ");break;
